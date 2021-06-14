@@ -1,20 +1,21 @@
 import kotlinx.coroutines.*
 
-// scope of coroutines
-fun scope(){
-    val a = CoroutineScope(Dispatchers.IO)
+fun coroutineBasics(){
+    // scope of coroutines
+    val a = CoroutineScope(Dispatchers.Default)
     // launch and async
     a.launch {
         run()
-        // async
-        val b = async {
-            run()
-        }.await()
-        print(b)
-        withContext(Dispatchers.Default){
-            print("withContext")
-        }
     }
+
+    // async
+//    a.async {
+//        run()
+//    }.await()
+//
+//    withContext(Dispatchers.Default){
+//        run()
+//    }
 }
 
 // suspend function
