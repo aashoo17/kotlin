@@ -21,6 +21,7 @@ class Bird3(name: String){
 //secondary constructors
 class Bird4(){
     //secondary constructor must invoke primary in kotlin
+    //usually delegation to another constructor is optional but kotlin makes at mandatory
     constructor(name: String) : this() {
 
     }
@@ -35,7 +36,7 @@ class Bird5{
         print(name + age)
     }
 
-    //inner classes
+    //inner class
     class Sparrow{
 
     }
@@ -46,7 +47,9 @@ class Bird5{
 abstract class Bird6(){
     val name = ""
     val age = 10
+    //abstract methods- abstract class implementer will complete the function body
     abstract fun printBird()
+    //normal methods
     fun speak(){
 
     }
@@ -88,7 +91,9 @@ class Derive2: Base2(){
 
 /*
  interfaces
- difference between abstract class and interface
+ TODO: difference between abstract class and interface
+ abstract class can have state also (i.e. fields)
+ multiple interfaces can be implemented
  */
 
 interface Bird{
@@ -113,6 +118,7 @@ enum class Man{
     Male, Female
 }
 
+//enum fields with data type
 enum class Color(val rgb: Int) {
     RED(0xFF0000),
     GREEN(0x00FF00),
