@@ -1,3 +1,5 @@
+package std
+
 import java.time.*
 
 fun duration(){
@@ -18,7 +20,6 @@ fun calendarTime(){
     val a = ZonedDateTime.now()
 
     //getting year, month, day and hours, min, sec
-    //this will be valid for ZonedDateTime also
     var b = a.getHour();
     var c = a.getMinute();
     var d = a.getSecond();
@@ -29,7 +30,6 @@ fun calendarTime(){
 
     val h = LocalDateTime.now();
     //getting year, month, day and hours, min, sec
-    //this will be valid for ZonedDateTime also
     var i = h.getHour();
     var j = h.getMinute();
     var k = h.getSecond();

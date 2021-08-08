@@ -1,3 +1,5 @@
+package coroutine
+
 import kotlinx.coroutines.*
 
 fun coroutineBasics(){
@@ -7,19 +9,19 @@ fun coroutineBasics(){
     a.launch {
         run()
     }
-
-// async
-//    a.async {
-//        run()
-//    }.await()
-//
-//    withContext(Dispatchers.Default){
-//        run()
-//    }
+    //todo: how to use async and withContext()
+    //async
+    //    a.async {
+    //        run()
+    //    }.await()
+    //
+    //    withContext(Dispatchers.Default){
+    //        run()
+    //    }
 }
 
 //todo: passing suspended vs normal function. what's the difference
-// suspend function
+//suspend function
 suspend fun run(){
     delay(2000)
     print("Hello after delay")
