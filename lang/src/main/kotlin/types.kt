@@ -1,5 +1,4 @@
 //integers
-
 fun integers(){
     //signed integers
     val a: Byte = 10
@@ -15,7 +14,6 @@ fun integers(){
 }
 
 //floating points
-
 fun floats(){
     val a: Float = 10F
     val b: Double = 10.0
@@ -27,13 +25,11 @@ fun boolean(){
 }
 
 // strings
-
 fun string(){
     val a: String = "Hello World"
 }
 
 // arrays - for compatibility with java arrays
-
 fun arrays(){
     // integer array
     val a : IntArray = IntArray(10)
@@ -42,19 +38,14 @@ fun arrays(){
 }
 
 // range
-
 fun range(){
     val a: IntRange = 1..10     //values from 1 to 10
 }
 
-
-
 // bitwise operation - operations applied on each bit rather than byte level
-
 fun bitwiseOperation(){
     val a = 10
     val b = 20
-
     val c = a shl b     // a << b
     val d = a shr b     // a >> b
     val e = a ushr b
@@ -72,7 +63,6 @@ fun instanceChecking(){
 }
 
 // explicit conversion
-
 fun explicitConversion(){
     // toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble() etc.. will to conversion on integers and floats
     val a: Int = 10
@@ -80,6 +70,7 @@ fun explicitConversion(){
 }
 
 /*
+casting:
 as
 as is used for casting between classes
 remember primitives use toByte(), toInt(), toLong() functions rather

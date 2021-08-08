@@ -55,7 +55,7 @@ abstract class Bird6(){
     }
 }
 
-// companion object
+// companion object - more like static methods provider
 class Bird7(){
     companion object {
         // can be accessed as Bird8.someFunc()

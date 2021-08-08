@@ -8,7 +8,7 @@ fun coroutineBasics(){
         run()
     }
 
-    // async
+// async
 //    a.async {
 //        run()
 //    }.await()
@@ -18,7 +18,7 @@ fun coroutineBasics(){
 //    }
 }
 
-//todo: passing suspsend vs normal function. what's the difference
+//todo: passing suspended vs normal function. what's the difference
 // suspend function
 suspend fun run(){
     delay(2000)
