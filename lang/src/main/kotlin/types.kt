@@ -26,7 +26,12 @@ fun boolean(){
 
 // strings
 fun string(){
-    val a: String = "Hello World"
+    var a = "Hello World"
+    val b: String = "Hello String"
+    //string modification
+    //todo: is there non modifiable String class in kotlin
+    a = "NEW String"
+    println(a)
 }
 
 // arrays - for compatibility with java arrays

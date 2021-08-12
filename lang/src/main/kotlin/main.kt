@@ -1,3 +1,3 @@
-fun main() {
-    customString()
-}
+import coroutine.coroutine04
+
+fun main() = coroutine04()
