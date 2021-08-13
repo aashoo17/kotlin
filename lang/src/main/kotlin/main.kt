@@ -1,3 +1,5 @@
-import coroutine.coroutine04
+import ktor.httpClient
 
-fun main() = coroutine04()
+fun main() {
+    httpClient()
+}
