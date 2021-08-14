@@ -11,7 +11,7 @@ fun exceptionHandling() = runBlocking {
         }
     }catch (e: Exception){
         // handle error here
-        //fixme: error is not getting catched properly
+        //fixme: error is not getting caught properly
         e.printStackTrace()
     }
 

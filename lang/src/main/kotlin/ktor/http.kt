@@ -1,7 +1,9 @@
 package ktor
 
 import io.ktor.client.*
+import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*
+import io.ktor.client.features.json.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import kotlinx.coroutines.launch
@@ -15,11 +17,38 @@ fun httpClient() = runBlocking{
         // get() call is requiring explicit type of HttpResponse
         val resp : HttpResponse = client.get("https://jsonplaceholder.typicode.com/posts")
         //todo: show the bytes received
-        print(resp.status)
+        val respString: String = resp.receive()     //explicit type is required - as generic T is returned
+        print(respString)
     }
 }
 
-//todo: modify the client properties
-//todo: tell about different engines available and modify the engine properties
+//modify the client properties
+fun modifyClient() = runBlocking {
+    val client = HttpClient(CIO){
+        // http client props
+        expectSuccess = false
+        developmentMode = false
+        followRedirects = true
+        // configure the engine props here
+        engine {
+
+        }
+    }
+}
 //todo: creation of request from HttpRequest apart from string address
-//todo: handling json
+
+// handling JSON
+fun jsonHandling() = runBlocking {
+    val client = HttpClient(CIO) {
+        install(JsonFeature) {
+            // todo: use other serializers
+            serializer = GsonSerializer()
+        }
+    }
+    val posts: List<Posts> = client.get("https://jsonplaceholder.typicode.com/posts")
+    for(i in posts){
+        println(i.body)
+    }
+}
+
+data class Posts(val userId: Int, val id: Int, val title: String, val body: String)

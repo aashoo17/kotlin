@@ -1,3 +1,5 @@
+import ktor.jsonHandling
+
 fun main() {
-    exception()
+    jsonHandling()
 }
