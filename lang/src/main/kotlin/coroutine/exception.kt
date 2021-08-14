@@ -17,8 +17,6 @@ fun exceptionHandling() = runBlocking {
 
 }
 
-// suspend functions
-// todo: even regular functions can be called in coroutines why suspend modifier is used
 suspend fun coroutineFunc(){
     delay(2000)
 //    println("Hello World")

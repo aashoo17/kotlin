@@ -4,7 +4,7 @@ import kotlinx.coroutines.*
 
 /*
  runBlocking will block the current thread till coroutines is not completed
- this is required so that main thread does not exit and in turn cleans up all the green threads and they do not get
+ this is required so that main thread does not exit and in turn cleans up all the green threads, and they do not get
  time to complete the code written in them
  runBlocking kinda bridge the gap between blocking and non-blocking world
  */
@@ -27,7 +27,7 @@ fun coroutine02() = runBlocking{
     coroutineFunc02()
 }
 
-// cancelling up the coroutine in between even if the job is not complete
+// cancelling up the coroutine in between even if the code inside coroutine is not completed
 fun coroutine03() = runBlocking {
     val job = launch {
         delay(4000)
@@ -39,7 +39,7 @@ fun coroutine03() = runBlocking {
 /*
  scope builder:
  handling individual coroutines and cleaning them will be a lot of pain
- enter the coroutineScope which can manage all coroutines created in a scope
+ enter the CoroutineScope which can manage all coroutines created in a scope
  e.g.
  launch 3 coroutines in a scope and cancel them all using this scope
  */
