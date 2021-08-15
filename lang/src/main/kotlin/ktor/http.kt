@@ -6,6 +6,7 @@ import io.ktor.client.engine.cio.*
 import io.ktor.client.features.json.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -45,9 +46,15 @@ fun jsonHandling() = runBlocking {
             serializer = GsonSerializer()
         }
     }
-    val posts: List<Posts> = client.get("https://jsonplaceholder.typicode.com/posts")
-    for(i in posts){
-        println(i.body)
+    launch(Dispatchers.IO) {
+        try{
+            val posts: List<Posts> = client.get("https://jsonplaceholder.typicode.com/posts")
+            for(i in posts){
+                println(i.body)
+            }
+        }catch (e: Exception){
+            print("data fetching error happened")
+        }
     }
 }
 

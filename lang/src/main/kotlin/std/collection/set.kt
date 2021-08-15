@@ -55,5 +55,4 @@ fun mutableSet(){
     a.add(40)
 
     a.remove(10)
-
 }

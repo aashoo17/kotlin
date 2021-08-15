@@ -21,6 +21,13 @@ fun forLoop(){
     }
 }
 
+// repeat
+fun repeatLoop(){
+    repeat(10){
+        print(it)
+    }
+}
+
 //TODO: break and continue
 
 /*

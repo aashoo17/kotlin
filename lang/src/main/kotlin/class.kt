@@ -1,15 +1,9 @@
 //class
-
 //constructors
-
 //primary constructors
-class Bird1{
+class Bird1{}
 
-}
-
-class Bird2(name: String){
-
-}
+class Bird2(name: String){}
 
 class Bird3(name: String){
     val name: String
@@ -28,31 +22,24 @@ class Bird4(){
 }
 
 //properties and methods in class
-
 class Bird5{
     val name = "Some random name"
     val age = 10
     fun printBird(){
         print(name + age)
     }
-
     //inner class
-    class Sparrow{
-
-    }
+    class Sparrow{}
 }
 
 // abstract class
-
 abstract class Bird6(){
     val name = ""
     val age = 10
     //abstract methods- abstract class implementer will complete the function body
     abstract fun printBird()
     //normal methods
-    fun speak(){
-
-    }
+    fun speak(){}
 }
 
 // companion object - more like static methods provider
@@ -107,7 +94,6 @@ class Sparrow: Bird, Animal{
     override fun isBird(): Boolean {
         return true
     }
-
     override fun isAnimal(): Boolean {
         return false
     }
@@ -119,6 +105,7 @@ enum class Man{
 }
 
 //enum fields with data type
+//todo: can data type be different for all fields
 enum class Color(val rgb: Int) {
     RED(0xFF0000),
     GREEN(0x00FF00),

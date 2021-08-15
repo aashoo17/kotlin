@@ -30,6 +30,18 @@ fun characterBasedIO(){
     c.close()
 }
 
+fun byteBasedIO(){
+    val a = FileInputStream("file.txt")
+    val b = ByteArray(100)
+    a.read(b)
+    a.close()
+
+    val c = FileOutputStream("file.txt")
+    val d = ByteArray(100){it.toByte()}
+    c.write(b)
+    c.close()
+}
+
 fun characterBasedBufferedIO(){
     val a = FileWriter("file.txt")
     val b = BufferedWriter(a)
@@ -43,18 +55,6 @@ fun characterBasedBufferedIO(){
     d.read(e)
     println(e)
     d.close()
-}
-
-fun byteBasedIO(){
-    val a = FileInputStream("file.txt")
-    val b = ByteArray(100)
-    a.read(b)
-    a.close()
-
-    val c = FileOutputStream("file.txt")
-    val d = ByteArray(100){it.toByte()}
-    c.write(b)
-    c.close()
 }
 
 fun byteBasedBufferedIO(){
@@ -77,5 +77,6 @@ fun byteBasedBufferedIO(){
  they will be data containers
  IO capable device abstraction - socket, file etc.
  Channels:
-
+ there are different types of channel which can provide different type of read/write
+ capabilities some channel can be asynchronous, some buffered, some byte based etc..
  */

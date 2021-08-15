@@ -2,7 +2,6 @@ package std.collection
 
 fun map(){
     val a = mapOf(1 to "one", 2 to "two")
-
     //find by key
     val b = a[1]
     val c = a.get(2)

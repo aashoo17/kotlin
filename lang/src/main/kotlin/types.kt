@@ -11,6 +11,11 @@ fun integers(){
 
     // unsigned integers are still in beta in kotlin
     // java never supported them to keep things simple
+
+    // integer literal - in octal, hex, binary
+    //todo: octal is not supported in kotlin ??
+    val h = 0x10    //hex
+    val i = 0b10    //binary
 }
 
 //floating points
@@ -29,8 +34,8 @@ fun string(){
     var a = "Hello World"
     val b: String = "Hello String"
     //string modification
-    //todo: is there non modifiable String class in kotlin
-    a = "NEW String"
+    //todo: is there non modifiable String class in kotlin or just use val
+    a = "New String"
     println(a)
 }
 
@@ -40,6 +45,8 @@ fun arrays(){
     val a : IntArray = IntArray(10)
     //float array
     val b: FloatArray = FloatArray(10)
+    //char array - char[] in java
+    val c = CharArray(10){it.toChar()}  //using trailing lambda
 }
 
 // range
@@ -67,7 +74,7 @@ fun instanceChecking(){
     val b = a is String
 }
 
-// explicit conversion
+// explicit conversion for primitives
 fun explicitConversion(){
     // toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble() etc.. will to conversion on integers and floats
     val a: Int = 10
@@ -75,6 +82,7 @@ fun explicitConversion(){
 }
 
 /*
+Explicit conversion - for classes
 casting:
 as
 as is used for casting between classes
@@ -83,6 +91,10 @@ remember primitives use toByte(), toInt(), toLong() functions rather
 as?
 as can fail if it it is not able to succeed in conversion - runtime exception is thrown
 as? is fails will take a safe route and will return null
+
+as? or as is required in two places
+1. class in doing inheritance and in signature base class is being used
+2. class in based on some interface and in signature interface type is being used
 */
 
 class Ashu: Human {}

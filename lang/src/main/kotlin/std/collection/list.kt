@@ -25,8 +25,7 @@ fun list(){
         //TODO: using for printing space find a better way
         print(" ")
     }
-
-    //things based on iterator
+    // things based on iterator
     // transformation - map, zip, flatten
     val g = listOf(10,20,30,40,50,60,70)
     val h = g.map { it * 2}
