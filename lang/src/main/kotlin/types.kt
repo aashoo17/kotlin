@@ -109,3 +109,5 @@ fun typeCasting(){
     val e: Ashu?
     e = a   //this implicitly calls as? as type is explicit as Ashu?
 }
+
+//todo: type alias
