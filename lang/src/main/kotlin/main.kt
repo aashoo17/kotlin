@@ -1,5 +1,5 @@
-import ktor.jsonHandling
+import std.channel
 
 fun main() {
-    jsonHandling()
+    channel()
 }

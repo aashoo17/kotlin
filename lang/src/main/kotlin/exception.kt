@@ -1,9 +1,16 @@
 fun exception(){
-    // if exception is thrown in try block
+    // if exception is thrown by a code put it in try block
     try{
-        throwException()
-    }catch (e: Exception){
+        throwException()    //this code can throw exception
+    }
+    catch (e: ArithmeticException){
+        //so something
+    }
+    catch (e: Exception){  //catch the exception
         println("caught exception")
+    }
+    finally {
+        // this code always runs
     }
 }
 

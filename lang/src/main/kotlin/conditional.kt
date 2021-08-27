@@ -8,6 +8,7 @@ fun conditionalIf(){
     }else{
         print("something else lol")
     }
+    //todo: using && and ||
 }
 
 fun whenUses(){

@@ -31,12 +31,13 @@ fun boolean(){
 
 // strings
 fun string(){
+    // this is non modifiable string class
     var a = "Hello World"
     val b: String = "Hello String"
-    //string modification
-    //todo: is there non modifiable String class in kotlin or just use val
-    a = "New String"
+    a = "New String"    //this just assigns the variable a to new string location
     println(a)
+
+    //todo: StringBuilder
 }
 
 // arrays - for compatibility with java arrays
